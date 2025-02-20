@@ -119,7 +119,9 @@ trusted-host=192.168.0.4
   "insecure-registries": ["192.168.0.4"]
 }
 ```
-## Посмотреть загруженные пакеты можно:
+# после обновления конфига для докера необходимо прописать:
+# sudo systemctl restart docker
+### Посмотреть загруженные пакеты можно:
 ![image](https://github.com/user-attachments/assets/3131b8e8-be17-4781-9648-9dcb237ed5ee)
 # Далее заходим под user: admin pass:123( не обязательно для просмотра пакетов)
 ![da](https://github.com/user-attachments/assets/c796f57d-95d0-46ba-bb74-768c76c4095f)
