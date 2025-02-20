@@ -123,7 +123,7 @@ trusted-host=192.168.0.4
 ![image](https://github.com/user-attachments/assets/3131b8e8-be17-4781-9648-9dcb237ed5ee)
 # Далее заходим под user: admin pass:123( не обязательно для просмотра пакетов)
 ![da](https://github.com/user-attachments/assets/c796f57d-95d0-46ba-bb74-768c76c4095f)
-# Жмём на 1 потом на 2 и тут показы репозитории, кликнув на которые покажется их содержимое, например при нажатии на dockerhubprox откроется следующее:
+# Жмём на 1 потом на browse и тут показы репозитории, кликнув на которые покажется их содержимое, например при нажатии на dockerhubprox откроется следующее:
 ![image](https://github.com/user-attachments/assets/e06b3eec-1023-4a77-972b-460eb4ef01dd)
 
 
