@@ -4,7 +4,7 @@ services:
     image: sonatype/nexus3
     ports:
       - "8081:8081"
-      - "8082:8082"
+      - "5005:5005"
     volumes: 
       - ./volume:/nexus-data
     restart: always
@@ -17,11 +17,12 @@ services:
     ports:
       - "443:443"
     command: >
-      /bin/sh -c "mkdir -p /etc/ssl/private /etc/ssl/certs &&
+      /bin/sh -c "mkdir -p /etc/nginx/ssl/ &&
       openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
       -keyout /etc/nginx/ssl/ssl_certificate.key \
       -out /etc/nginx/ssl/ssl_certificate.crt \
-      -subj '/C=US/ST=State/L=City/O=Organization/OU=Unit/CN=example.com'"
+      -subj '/C=US/ST=State/L=City/O=Organization/OU=Unit/CN=example.com' &&
+      nginx -g 'daemon off;'"
     restart: always
     depends_on:
       - nexus
