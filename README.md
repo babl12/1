@@ -102,3 +102,28 @@ deb-src http://security.ubuntu.com/ubuntu jammy-security multiverse
 # entries were disabled at the end of the installation process.
 # For information about how to configure apt package sources,
 # see the sources.list(5) manual.
+```
+# for pip
+# sudo nano /etc/pip.conf
+```
+[global]
+index=http://192.168.0.4:8081/repository/pypiprox/pypi
+extra-index-url=http://192.168.0.4:8081/repository/pypiprox/simple\
+trusted-host=192.168.0.4
+```
+# for docker 
+# sudo nano /etc/docker/daemon.json
+```
+{
+  "registry-mirrors": ["https://192.168.0.4"],
+  "insecure-registries": ["192.168.0.4"]
+}
+```
+##Посмотреть загруженные пакеты можно:
+![image](https://github.com/user-attachments/assets/3131b8e8-be17-4781-9648-9dcb237ed5ee)
+#Далее заходим под user: admin pass:123( не обязательно для просмотра пакетов)
+![da](https://github.com/user-attachments/assets/c796f57d-95d0-46ba-bb74-768c76c4095f)
+#Жмём на 1 потом на 2 и тут показы репозитории, кликнув на которые покажется их содержимое, например при нажатии на dockerhubprox откроется следующее:
+![image](https://github.com/user-attachments/assets/e06b3eec-1023-4a77-972b-460eb4ef01dd)
+
+
