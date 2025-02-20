@@ -19,8 +19,8 @@ services:
     command: >
       /bin/sh -c "mkdir -p /etc/ssl/private /etc/ssl/certs &&
       openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-      -keyout /etc/nginx/ssl/selfsigned.key \
-      -out /etc/nginx/ssl/selfsigned.crt \
+      -keyout /etc/nginx/ssl/ssl_certificate.key \
+      -out /etc/nginx/ssl/ssl_certificate.crt \
       -subj '/C=US/ST=State/L=City/O=Organization/OU=Unit/CN=example.com'"
     restart: always
     depends_on:
